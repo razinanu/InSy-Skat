@@ -3,6 +3,7 @@ package com.example.insy_skat;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
+import android.content.Intent;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -62,5 +63,9 @@ public class SelectedSoldiers extends FragmentActivity {
 			return rootView;
 		}
 	}
+	   public void backToPrevActivity(View view) 
+	    {
+	        finish();
+	    }
 
 }
