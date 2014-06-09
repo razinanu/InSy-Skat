@@ -3,6 +3,7 @@ package com.example.insy_skat;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -11,7 +12,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.os.Build;
 
-public class SelectedSoldiers extends ActionBarActivity {
+//ActionBarActivity
+public class SelectedSoldiers extends FragmentActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
