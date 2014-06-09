@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!--
         Base application theme, dependent on API level. This theme is replaced
@@ -16,12 +16,11 @@
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
-<style name="Widget.Button.Toggle" parent="android:Widget">
-   <item name="android:background">@drawable/ic_toggle_bg</item>
+   <style name="Widget.Button.Toggle" parent="android:Widget">
+   <item name="android:background">@drawable/toggle_karo_bg</item>
    <item name="android:disabledAlpha">?android:attr/disabledAlpha</item>
 </style>
 <style name="toggleButton"  parent="@android:Theme.Black">
-
 <item name="android:buttonStyleToggle">@style/Widget.Button.Toggle</item>
 <item name="android:textOn"></item>
 <item name="android:textOff"></item>
