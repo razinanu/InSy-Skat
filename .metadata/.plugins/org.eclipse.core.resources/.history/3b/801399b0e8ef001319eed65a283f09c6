@@ -13,6 +13,5 @@
     <string name="bubenAuswaehlen">Buben Auswählen</string>
     <string name="reizassistent">Reizassistent</string>
     <string name="title_activity_selected_soldiers">SelectedSoldiers</string>
-    <string name="title_activity_farben_auswahl">FarbenAuswahl</string>
 
 </resources>

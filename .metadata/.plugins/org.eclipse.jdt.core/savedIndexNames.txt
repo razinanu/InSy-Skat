@@ -2,6 +2,5 @@ INDEX VERSION 1.126+/Users/razinanu/Documents/workspace/InSy-Skat/.metadata/.plu
 3111450768.index
 1636549767.index
 30568030.index
-1534662694.index
 914042150.index
 1270315800.index
