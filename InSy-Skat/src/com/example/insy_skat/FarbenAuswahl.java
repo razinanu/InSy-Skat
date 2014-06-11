@@ -60,5 +60,9 @@ public class FarbenAuswahl extends ActionBarActivity {
 			return rootView;
 		}
 	}
+	 public void backToPrevActivity(View view) 
+	    {
+	        finish();
+	    }
 
 }

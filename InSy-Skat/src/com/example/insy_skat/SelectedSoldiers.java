@@ -67,5 +67,10 @@ public class SelectedSoldiers extends FragmentActivity {
 	    {
 	        finish();
 	    }
+	   public void farbenAuswahlAcctivity(View view) 
+	    {
+	        Intent intent = new Intent(this, FarbenAuswahl.class);
+	        startActivity(intent);
+	    }
 
 }

@@ -18,7 +18,7 @@
         android:orientation="vertical" 
         android:layout_gravity="center" >
           <TextView
-            android:id="@+id/textView1"
+            android:id="@+id/textmenu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -27,7 +27,7 @@
             android:textColor="#ffffff" />
 
         <Button
-            android:id="@+id/button1"
+            android:id="@+id/farbGrandGameButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
@@ -37,7 +37,7 @@
             android:background="#ffffff" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/nullGameButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -46,7 +46,7 @@
             android:background="#ffffff"/>
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/exiteButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
