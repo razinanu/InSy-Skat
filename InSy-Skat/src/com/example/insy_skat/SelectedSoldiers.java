@@ -1,8 +1,8 @@
 package com.example.insy_skat;
 
-import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
+import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
@@ -10,11 +10,19 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.os.Build;
+import android.widget.CompoundButton;
+import android.widget.Toast;
+import android.widget.ToggleButton;
+
 
 //ActionBarActivity
 public class SelectedSoldiers extends FragmentActivity {
+	private ToggleButton kreuzToggle, pikToggle, karoToggle,herzToggle;
+	private boolean kreuz=false,pik=false,herz=false,karo=false;
+	private Activity activity;
+			
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +33,51 @@ public class SelectedSoldiers extends FragmentActivity {
 			getSupportFragmentManager().beginTransaction()
 					.add(R.id.container, new PlaceholderFragment()).commit();
 		}
+		kreuzToggle = (ToggleButton) findViewById(R.id.kreuztoggle);
+//		pikToggle = (ToggleButton) findViewById(R.id.piktoggle);
+//		karoToggle = (ToggleButton) findViewById(R.id.karotoggle);
+//        herzToggle = (ToggleButton) findViewById(R.id.herztoggle);
+		
+		
+//      
+		
+		kreuzToggle.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+		    @Override
+			public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+		        if (isChecked) {
+		        	kreuz=true;
+					toastAppearance();
+		        } else {
+		        	kreuz=false;
+		        }
+		    }
+		});
+        kreuzToggle.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				if(kreuzToggle.isChecked()){
+					kreuz=true;
+					toastAppearance();
+				}
+				else{
+					kreuz=false;
+				}
+					
+			}
+		});
+		 
+	  }
+	 
+	protected void toastAppearance(){
+		Context context = getApplicationContext();
+		CharSequence text = "Hello toast!";
+		int duration = Toast.LENGTH_SHORT;
+
+		Toast toast = Toast.makeText(context, text, duration);
+		toast.show();
+		
 	}
 
 	@Override

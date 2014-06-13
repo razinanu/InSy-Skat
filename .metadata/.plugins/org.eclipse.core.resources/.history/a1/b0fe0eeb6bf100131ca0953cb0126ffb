@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Reizassistent</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="zurueck">Zurück</string>
+    <string name="weiter">Weiter</string>
+    <string name="menue">Menü</string>
+    <string name="abbrechen">Abbrechen</string>
+    <string name="farbspielGrand">Farbspiel/Grand</string>
+    <string name="nullString">Null</string>
+    <string name="reizassistent">Reizassistent</string>
+     <string name="bubenAuswaehlen">Buben Auswählen</string>
+    <string name="farbenAuswahl">Farben Auswählen</string>
+    <string name="reizenTabelle">Reiztabelle</string>
+    <string name="title_activity_selected_soldiers">SelectedSoldiers</string>
+    <string name="title_activity_farben_auswahl">FarbenAuswahl</string>
+    <string name="title_activity_result">ResultActivity</string>
+
+</resources>

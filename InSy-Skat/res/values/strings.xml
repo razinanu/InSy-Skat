@@ -10,11 +10,13 @@
     <string name="abbrechen">Abbrechen</string>
     <string name="farbspielGrand">Farbspiel/Grand</string>
     <string name="nullString">Null</string>
-    <string name="bubenAuswaehlen">Buben Auswählen</string>
-    <string name="farbenAuswahl">Farben Auswählen</string>
+    <string name="grand">Grand</string>
     <string name="reizassistent">Reizassistent</string>
+     <string name="bubenAuswaehlen">Buben Auswählen</string>
+    <string name="farbenAuswahl">Farben Auswählen</string>
+    <string name="reizenTabelle">Reiztabelle</string>
     <string name="title_activity_selected_soldiers">SelectedSoldiers</string>
     <string name="title_activity_farben_auswahl">FarbenAuswahl</string>
-    
+    <string name="title_activity_result">ResultActivity</string>
 
 </resources>
