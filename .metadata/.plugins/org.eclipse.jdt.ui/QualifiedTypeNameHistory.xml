@@ -11,4 +11,5 @@
 <fullyQualifiedTypeName name="android.widget.Toast"/>
 <fullyQualifiedTypeName name="android.content.Context"/>
 <fullyQualifiedTypeName name="android.widget.CompoundButton"/>
+<fullyQualifiedTypeName name="com.example.insy_skat.ResultActivity"/>
 </qualifiedTypeNameHistroy>
