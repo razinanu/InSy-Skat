@@ -2,7 +2,6 @@
 <resources>
 
     <string name="app_name">Reizassistent</string>
-    <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="zurueck">Zurück</string>
     <string name="weiter">Weiter</string>
@@ -18,7 +17,19 @@
     <string name="title_activity_selected_soldiers">SelectedSoldiers</string>
     <string name="title_activity_farben_auswahl">FarbenAuswahl</string>
     <string name="title_activity_result">ResultActivity</string>
-    <string name="info_title">Zusätzliche Informationen</string>
-    
-
+    <string name="text18">18</string>
+     <string name="text20">20</string>
+    <string name="text22">22</string>
+     <string name="text23">23</string>
+      <string name="text24">24</string>
+      <string name="text27">27</string>
+      <string name="text30">30</string>
+      <string name="text35">35</string>
+      <string name="text36">36</string>
+      <string name="text40">40</string>
+      <string name="text44">44</string>
+      <string name="text45">45</string>
+      <string name="text46">46</string>
+      <string name="text48">48</string>
+      <string name="text50">50</string>
 </resources>

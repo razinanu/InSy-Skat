@@ -2,6 +2,7 @@ package com.example.insy_skat;
 
 import android.support.v7.app.ActionBarActivity;
 import android.support.v4.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -61,6 +62,11 @@ public class FarbenAuswahl extends ActionBarActivity {
 	 public void backToPrevActivity(View view) 
 	    {
 	        finish();
+	    }
+	  public void resultKruezActivity(View view) 
+	    {
+	        Intent intent = new Intent(this, ResultActivity.class);
+	        startActivity(intent);
 	    }
 
 }

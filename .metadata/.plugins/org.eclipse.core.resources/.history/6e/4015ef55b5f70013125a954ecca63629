@@ -1,0 +1,45 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/hintergrundapp"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.insy_skat.FarbenAuswahl$PlaceholderFragment" >
+
+    <TextView
+        android:id="@+id/FrabenAuswahlText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/farbenAuswahl"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#ffffff" />
+
+   <Button
+       android:id="@+id/kreuzSymbol"
+       android:layout_width="82dp"
+       android:layout_height="81dp"
+       android:layout_alignLeft="@+id/FrabenAuswahlText"
+       android:layout_below="@+id/FrabenAuswahlText"
+       android:layout_marginLeft="20dp"
+       android:layout_marginTop="49dp"
+       android:background="@drawable/kreuzsymbol" />
+
+   <Button
+       android:id="@+id/pikSymbol"
+       android:layout_width="81dp"
+       android:layout_height="96dp"
+       android:layout_alignBaseline="@+id/kreuzSymbol"
+       android:layout_alignBottom="@+id/kreuzSymbol"
+       android:layout_toRightOf="@+id/FrabenAuswahlText"
+       android:background="@drawable/piksymbol" />
+   <Button
+            android:id="@+id/herzSymbol"
+            android:layout_width="112dp"
+            android:layout_height="119dp"
+           android:background="@drawable/herzsymbol" />
+
+</RelativeLayout>
