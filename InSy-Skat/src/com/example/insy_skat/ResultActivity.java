@@ -2,31 +2,60 @@ package com.example.insy_skat;
 
 import android.support.v7.app.ActionBarActivity;
 import android.support.v4.app.Fragment;
+import android.annotation.SuppressLint;
+import android.app.ActionBar.LayoutParams;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.ScrollView;
+import android.widget.TextView;
+
 
 public class ResultActivity extends ActionBarActivity {
+
+	
+	LinearLayout rl1,rl2;
+	    ScrollView sv;
+	   TextView[] b;
+	    int sum=30;
+	
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_result);
-
-		if (savedInstanceState == null) {
-			getSupportFragmentManager().beginTransaction()
-					.add(R.id.container, new PlaceholderFragment()).commit();
-		}
-	}
+		setContentView(R.layout.fragment_result);
+		 rl1=(LinearLayout) findViewById(R.id.linearLayout);
+	      
+	        b=new TextView[20];
+	        
+	        for(int i=1;i<15;i++)
+	        {
+		    b[i]=new TextView(this);
+	            LinearLayout.LayoutParams params=new LinearLayout.LayoutParams(
+	            		android.view.ViewGroup.LayoutParams.MATCH_PARENT,android.view.ViewGroup.LayoutParams.WRAP_CONTENT);
+		   
+		    b[i].setText("number "+i);
+		    b[i].setBackgroundColor(getResources().getColor(R.color.backgroundnotAvailable));
+		    b[i].setLayoutParams(params);
+		    rl1.addView(b[i]);
+		    sum=sum+100;
+	        }
+	     
+	    }
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.result, menu);
+		
 		return true;
 	}
 
@@ -57,6 +86,9 @@ public class ResultActivity extends ActionBarActivity {
 					container, false);
 			return rootView;
 		}
+	}
+	public void backToPrevActivity(View view) {
+		finish();
 	}
 
 }

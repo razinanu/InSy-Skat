@@ -1,0 +1,88 @@
+package com.example.insy_skat;
+
+import android.support.v7.app.ActionBarActivity;
+import android.support.v4.app.Fragment;
+import android.app.ActionBar.LayoutParams;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.RelativeLayout;
+import android.widget.ScrollView;
+
+public class ResultActivity extends ActionBarActivity {
+
+	
+	  RelativeLayout rl1,rl2;
+	    ScrollView sv;
+	    Button[] b;
+	    int sum=30;
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.fragment_result);
+		 rl1=(RelativeLayout) findViewById(R.id.rl);
+	        sv=new ScrollView(ResultActivity.this);
+	        rl2=new RelativeLayout(ResultActivity.this);
+	        b=new Button[20];
+	        
+	        for(int i=1;i<15;i++)
+	        {
+		    b[i]=new Button(this);
+	            RelativeLayout.LayoutParams params=new RelativeLayout.LayoutParams(
+	            		android.view.ViewGroup.LayoutParams.WRAP_CONTENT,android.view.ViewGroup.LayoutParams.WRAP_CONTENT);
+		    params.leftMargin=50;
+	            params.topMargin=sum;
+		    b[i].setText("Button "+i);
+		    b[i].setLayoutParams(params);
+		    rl2.addView(b[i]);
+		    sum=sum+100;
+	        }
+	        
+	        sv.addView(rl2);
+	        rl1.addView(sv);
+	    }
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.result, menu);
+		
+		return true;
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		// Handle action bar item clicks here. The action bar will
+		// automatically handle clicks on the Home/Up button, so long
+		// as you specify a parent activity in AndroidManifest.xml.
+		int id = item.getItemId();
+		if (id == R.id.action_settings) {
+			return true;
+		}
+		return super.onOptionsItemSelected(item);
+	}
+
+	/**
+	 * A placeholder fragment containing a simple view.
+	 */
+	public static class PlaceholderFragment extends Fragment {
+
+		public PlaceholderFragment() {
+		}
+
+		@Override
+		public View onCreateView(LayoutInflater inflater, ViewGroup container,
+				Bundle savedInstanceState) {
+			View rootView = inflater.inflate(R.layout.fragment_result,
+					container, false);
+			return rootView;
+		}
+	}
+
+}
