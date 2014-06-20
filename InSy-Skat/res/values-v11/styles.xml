@@ -7,13 +7,21 @@
     <style name="AppBaseTheme" parent="Theme.AppCompat.Light">
         <!-- API 11 theme customizations can go here. -->
     </style>
-    <!--  
-    <style name="MyTheme" parent="android:style/Theme.Holo">
-        <item name="android:actionBarStyle">@style/MyActionBarStyle</item>
+    
+    
+    <style name="AppTheme" parent="AppBaseTheme">
+       <item name="android:actionBarStyle">@style/ActionBar</item>
     </style>
+    
+    <style name="ActionBar" parent="android:Widget.Holo.Light.ActionBar.Solid.Inverse">
+    	<item name="android:background">#FFFFFF</item>
+	</style>
+    
+	<style name="AppThemeWithoutActionBarTitle" parent="AppTheme">
+    	<item name="android:actionBarStyle">@style/ActionBarWithoutTitle</item>
+	</style>	
+	<style name="ActionBarWithoutTitle" parent="@style/ActionBar">
+    	<item name="android:displayOptions">useLogo</item>
+	</style>
 
-    <style name="MyActionBarStyle" parent="@android:style/Widget.Holo.ActionBar">
-        <item name="android:displayOptions"></item>
-    </style>
-     -->
 </resources>

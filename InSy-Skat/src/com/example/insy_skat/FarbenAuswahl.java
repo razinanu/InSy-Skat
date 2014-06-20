@@ -73,5 +73,10 @@ public class FarbenAuswahl extends ActionBarActivity {
 	    {
 	        finish();
 	    }
+	  public void resultKruezActivity(View view) 
+	    {
+	        Intent intent = new Intent(this, ResultActivity.class);
+	        startActivity(intent);
+	    }
 
 }

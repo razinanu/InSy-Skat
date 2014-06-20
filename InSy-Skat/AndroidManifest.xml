@@ -12,7 +12,7 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppThemeWithoutActionBarTitle" >
         <activity
             android:name="com.example.insy_skat.MainActivity"
             android:label="@string/app_name"
@@ -38,7 +38,13 @@
         </activity>
         <activity
             android:name="com.example.insy_skat.ResultActivity"
-            android:label="@string/title_activity_result" >
+            android:label="@string/title_activity_result" 
+            android:screenOrientation="portrait">
+               <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+ 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 

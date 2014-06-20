@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  
+   <color name=”textnotAvailable”>#cc3311</color>
+<color name=”backgroundAvailable”>#1100dd</color>
+<color name=”backgroundnotAvailable”>#1100dd</color>
+
+</resources>

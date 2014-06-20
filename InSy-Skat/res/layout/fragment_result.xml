@@ -8,13 +8,41 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:background="@drawable/hintergrundapp"
     tools:context="com.example.insy_skat.ResultActivity$PlaceholderFragment" >
-
-     <TextView
+    <TextView
         android:id="@+id/reizTabelleText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/reizenTabelle"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="#ffffff" />
+
+     <ScrollView
+         android:id="@+id/scrollView1"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:layout_alignLeft="@+id/reizTabelleText"
+         android:layout_below="@+id/reizTabelleText"
+         android:layout_marginLeft="21dp"
+         android:layout_marginTop="20dp"
+          android:layout_marginBottom="80dp" >
+          
+<LinearLayout
+             android:layout_width="match_parent"
+             android:id="@+id/linearLayout"
+             android:layout_height="wrap_content"
+             android:orientation="vertical" >
+                     </LinearLayout>
+</ScrollView>
+<Button
+           android:id="@+id/backbutton"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_alignLeft="@+id/reizTabelleText"
+           android:layout_alignParentBottom="true"
+           android:layout_marginBottom="18dp"
+           android:background="#ffffff"
+           android:onClick="backToPrevActivity"
+           android:text="@string/zurueck"
+           android:width="100dp" />
 
 </RelativeLayout>
