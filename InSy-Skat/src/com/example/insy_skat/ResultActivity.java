@@ -2,9 +2,11 @@ package com.example.insy_skat;
 
 import android.support.v7.app.ActionBarActivity;
 import android.support.v4.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,9 +27,9 @@ public class ResultActivity extends ActionBarActivity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.result, menu);
-		return true;
+    	MenuInflater mif=getMenuInflater();
+    	mif.inflate(R.menu.main_activity_action, menu);
+    	return true;
 	}
 
 	@Override
@@ -35,10 +37,20 @@ public class ResultActivity extends ActionBarActivity {
 		// Handle action bar item clicks here. The action bar will
 		// automatically handle clicks on the Home/Up button, so long
 		// as you specify a parent activity in AndroidManifest.xml.
-		int id = item.getItemId();
-		if (id == R.id.action_settings) {
-			return true;
-		}
+        switch (item.getItemId())
+        {
+        case R.id.info_icon:
+        	/*
+            Intent intent = new Intent(this, InfoMain.class);
+            startActivity(intent);
+            */
+        	return true;
+        case R.id.home_icon:
+        	Intent intent = new Intent(this, MainActivity.class);
+        	intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+        	startActivity(intent);
+        	return true;
+        }
 		return super.onOptionsItemSelected(item);
 	}
 

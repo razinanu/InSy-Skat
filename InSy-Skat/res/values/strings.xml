@@ -19,6 +19,7 @@
     <string name="title_activity_farben_auswahl">FarbenAuswahl</string>
     <string name="title_activity_result">ResultActivity</string>
     <string name="info_title">Zusätzliche Informationen</string>
+    <string name="home_title">Hauptmenü</string>
     
 
 </resources>

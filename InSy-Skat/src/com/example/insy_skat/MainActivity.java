@@ -3,6 +3,7 @@ package com.example.insy_skat;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.ActionBarActivity;
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,14 +11,23 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends ActionBarActivity{
+	
 
-    @Override
+	@Override
     protected void onCreate(Bundle savedInstanceState) {
+		
+		/*
+    	getActionBar().setDisplayShowHomeEnabled(false);
+    	getActionBar().setDisplayShowTitleEnabled(false); 
+    	*/
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+       
 
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
@@ -35,21 +45,36 @@ public class MainActivity extends ActionBarActivity {
         //return true;
     	MenuInflater mif=getMenuInflater();
     	mif.inflate(R.menu.main_activity_action, menu);
-    	return super.onCreateOptionsMenu(menu);
+    	return true;
+    	//return super.onCreateOptionsMenu(menu);
     }
-
+    
+    
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            return true;
+    	
+    	//for later icons
+        switch (item.getItemId())
+        {
+        case R.id.info_icon:
+        	/*
+            Intent intent = new Intent(this, InfoMain.class);
+            startActivity(intent);
+            */
+        	return true;
+        case R.id.home_icon:
+        	Intent intent = new Intent(this, MainActivity.class);
+        	intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+        	startActivity(intent);
+        	return true;
         }
+        
         return super.onOptionsItemSelected(item);
     }
-
+    
     /**
      * A placeholder fragment containing a simple view.
      */
@@ -70,5 +95,7 @@ public class MainActivity extends ActionBarActivity {
         Intent intent = new Intent(this, SelectedSoldiers.class);
         startActivity(intent);
     }
+
+
 
 }
