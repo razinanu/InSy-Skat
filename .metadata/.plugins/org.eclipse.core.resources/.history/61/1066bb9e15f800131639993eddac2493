@@ -24,8 +24,8 @@
          android:layout_alignLeft="@+id/reizTabelleText"
          android:layout_below="@+id/reizTabelleText"
          android:layout_marginLeft="21dp"
-         android:layout_marginTop="20dp"
-          android:layout_marginBottom="80dp" >
+         android:layout_marginTop="50dp"
+          android:layout_marginBottom="30dp" >
 
          <LinearLayout
              android:layout_width="match_parent"
@@ -36,8 +36,8 @@
                  android:id="@+id/text18"
                  android:layout_width="match_parent"
                  android:layout_height="wrap_content"
-                 android:textColor="@color/textAvailable"
-                 android:background="@color/backgroundAvailable"
+                 android:textColor="@color/textnotAvailable"
+                 android:background="@color/backgroundnotAvailable"
                  android:gravity="center"
                  android:text="@string/text18"
                  android:textAppearance="?android:attr/textAppearanceLarge"
@@ -51,8 +51,8 @@
                  android:id="@+id/text20"
                  android:layout_width="match_parent"
                  android:layout_height="wrap_content"
-                 android:textColor="@color/textAvailable"
-                 android:background="@color/backgroundAvailable"
+                 android:textColor="@color/textnotAvailable"
+                 android:background="@color/backgroundnotAvailable"
                  android:gravity="center"
                  android:text="@string/text22"
                    android:textAppearance="?android:attr/textAppearanceLarge" />
@@ -535,7 +535,6 @@
            android:layout_height="wrap_content"
            android:layout_alignLeft="@+id/reizTabelleText"
            android:layout_alignParentBottom="true"
-           android:layout_marginBottom="18dp"
            android:background="#ffffff"
            android:onClick="backToPrevActivity"
            android:text="@string/zurueck"

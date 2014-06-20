@@ -24,8 +24,8 @@
          android:layout_alignLeft="@+id/reizTabelleText"
          android:layout_below="@+id/reizTabelleText"
          android:layout_marginLeft="21dp"
-         android:layout_marginTop="20dp"
-          android:layout_marginBottom="80dp" >
+         android:layout_marginTop="30dp"
+          android:layout_marginBottom="30dp" >
 
          <LinearLayout
              android:layout_width="match_parent"
@@ -36,8 +36,8 @@
                  android:id="@+id/text18"
                  android:layout_width="match_parent"
                  android:layout_height="wrap_content"
-                 android:textColor="@color/textAvailable"
-                 android:background="@color/backgroundAvailable"
+                 android:textColor="@color/textnotAvailable"
+                 android:background="@color/backgroundnotAvailable"
                  android:gravity="center"
                  android:text="@string/text18"
                  android:textAppearance="?android:attr/textAppearanceLarge"
@@ -51,8 +51,8 @@
                  android:id="@+id/text20"
                  android:layout_width="match_parent"
                  android:layout_height="wrap_content"
-                 android:textColor="@color/textAvailable"
-                 android:background="@color/backgroundAvailable"
+                 android:textColor="@color/textnotAvailable"
+                 android:background="@color/backgroundnotAvailable"
                  android:gravity="center"
                  android:text="@string/text22"
                    android:textAppearance="?android:attr/textAppearanceLarge" />
@@ -266,7 +266,7 @@
                  android:background="@color/backgroundnotAvailable"
                  android:gravity="center"
                  android:text="@string/text55"
-                 android:textAppearance="?android:attr/textAppearanceLarge"/>
+                 android:textAppearance="?android:attr/textAppearanceSmall" />
               <View
                 android:layout_width="fill_parent"
                 android:layout_height="0.2dp"
@@ -280,7 +280,7 @@
                  android:background="@color/backgroundnotAvailable"
                  android:gravity="center"
                  android:text="@string/text59"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
+                 android:textAppearance="?android:attr/textAppearanceSmall" />
               <View
                 android:layout_width="fill_parent"
                 android:layout_height="0.2dp"
@@ -294,7 +294,7 @@
                  android:background="@color/backgroundnotAvailable"
                  android:gravity="center"
                  android:text="@string/text60"
-                 android:textAppearance="?android:attr/textAppearanceLarge"/>
+                 android:textAppearance="?android:attr/textAppearanceSmall" />
               <View
                 android:layout_width="fill_parent"
                 android:layout_height="0.2dp"
@@ -308,7 +308,7 @@
                  android:background="@color/backgroundnotAvailable"
                  android:gravity="center"
                  android:text="@string/text63"
-                 android:textAppearance="?android:attr/textAppearanceLarge" />
+                 android:textAppearance="?android:attr/textAppearanceSmall" />
               <View
                 android:layout_width="fill_parent"
                 android:layout_height="0.2dp"
@@ -322,7 +322,7 @@
                  android:background="@color/backgroundnotAvailable"
                  android:gravity="center"
                  android:text="@string/text66"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
+                 android:textAppearance="?android:attr/textAppearanceSmall" />
               <View
                 android:layout_width="fill_parent"
                 android:layout_height="0.2dp"
@@ -336,7 +336,7 @@
                  android:background="@color/backgroundnotAvailable"
                  android:gravity="center"
                  android:text="@string/text70"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
+                 android:textAppearance="?android:attr/textAppearanceSmall" />
               <View
                 android:layout_width="fill_parent"
                 android:layout_height="0.2dp"
@@ -350,7 +350,7 @@
                  android:background="@color/backgroundnotAvailable"
                  android:gravity="center"
                  android:text="@string/text72"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
+                 android:textAppearance="?android:attr/textAppearanceSmall" />
               <View
                 android:layout_width="fill_parent"
                 android:layout_height="0.2dp"
@@ -364,7 +364,7 @@
                  android:background="@color/backgroundnotAvailable"
                  android:gravity="center"
                  android:text="@string/text77"
-                 android:textAppearance="?android:attr/textAppearanceLarge" />
+                 android:textAppearance="?android:attr/textAppearanceSmall" />
               <View
                 android:layout_width="fill_parent"
                 android:layout_height="0.2dp"
@@ -378,7 +378,7 @@
                  android:background="@color/backgroundnotAvailable"
                  android:gravity="center"
                  android:text="@string/text80"
-                 android:textAppearance="?android:attr/textAppearanceLarge" />
+                 android:textAppearance="?android:attr/textAppearanceSmall" />
               <View
                 android:layout_width="fill_parent"
                 android:layout_height="0.2dp"
@@ -392,7 +392,7 @@
                  android:background="@color/backgroundnotAvailable"
                  android:gravity="center"
                  android:text="@string/text84"
-                 android:textAppearance="?android:attr/textAppearanceLarge" />
+                 android:textAppearance="?android:attr/textAppearanceSmall" />
               <View
                 android:layout_width="fill_parent"
                 android:layout_height="0.2dp"
@@ -406,7 +406,7 @@
                  android:background="@color/backgroundnotAvailable"
                  android:gravity="center"
                  android:text="@string/text88"
-               android:textAppearance="?android:attr/textAppearanceLarge" />
+                 android:textAppearance="?android:attr/textAppearanceSmall" />
               <View
                 android:layout_width="fill_parent"
                 android:layout_height="0.2dp"
@@ -420,7 +420,7 @@
                  android:background="@color/backgroundnotAvailable"
                  android:gravity="center"
                  android:text="@string/text90"
-                 android:textAppearance="?android:attr/textAppearanceLarge" />
+                 android:textAppearance="?android:attr/textAppearanceSmall" />
               <View
                 android:layout_width="fill_parent"
                 android:layout_height="0.2dp"
@@ -434,7 +434,7 @@
                  android:background="@color/backgroundnotAvailable"
                  android:gravity="center"
                  android:text="@string/text96"
-                 android:textAppearance="?android:attr/textAppearanceLarge" />
+                 android:textAppearance="?android:attr/textAppearanceSmall" />
               <View
                 android:layout_width="fill_parent"
                 android:layout_height="0.2dp"
@@ -448,7 +448,7 @@
                  android:background="@color/backgroundnotAvailable"
                  android:gravity="center"
                  android:text="@string/text99"
-                 android:textAppearance="?android:attr/textAppearanceLarge"/>
+                 android:textAppearance="?android:attr/textAppearanceSmall" />
               <View
                 android:layout_width="fill_parent"
                 android:layout_height="0.2dp"
@@ -462,7 +462,7 @@
                  android:background="@color/backgroundnotAvailable"
                  android:gravity="center"
                  android:text="@string/text100"
-                 android:textAppearance="?android:attr/textAppearanceLarge" />
+                 android:textAppearance="?android:attr/textAppearanceSmall" />
               <View
                 android:layout_width="fill_parent"
                 android:layout_height="0.2dp"
@@ -474,9 +474,9 @@
                  android:layout_height="wrap_content"
                  android:textColor="@color/textnotAvailable"
                  android:background="@color/backgroundnotAvailable"
-                  android:text="@string/text108"
                  android:gravity="center"
-               android:textAppearance="?android:attr/textAppearanceLarge" />
+                 android:text="@string/text108"
+                 android:textAppearance="?android:attr/textAppearanceSmall" />
               <View
                 android:layout_width="fill_parent"
                 android:layout_height="0.2dp"
@@ -490,7 +490,7 @@
                  android:background="@color/backgroundnotAvailable"
                  android:gravity="center"
                  android:text="@string/text110"
-               android:textAppearance="?android:attr/textAppearanceLarge"/>
+                 android:textAppearance="?android:attr/textAppearanceSmall" />
               <View
                 android:layout_width="fill_parent"
                 android:layout_height="0.2dp"
@@ -504,7 +504,7 @@
                  android:background="@color/backgroundnotAvailable"
                  android:gravity="center"
                  android:text="@string/text117"
-                 android:textAppearance="?android:attr/textAppearanceLarge" />
+                 android:textAppearance="?android:attr/textAppearanceSmall" />
               <View
                 android:layout_width="fill_parent"
                 android:layout_height="0.2dp"
@@ -518,27 +518,17 @@
                  android:background="@color/backgroundnotAvailable"
                  android:gravity="center"
                  android:text="@string/text120"
-                 android:textAppearance="?android:attr/textAppearanceLarge" />
+                 android:textAppearance="?android:attr/textAppearanceSmall" />
               <View
                 android:layout_width="fill_parent"
                 android:layout_height="0.2dp"
                 android:visibility="visible"
                 android:background="@android:color/darker_gray"/>
-             
           
-          </LinearLayout>
-     </ScrollView>
+              
+               
 
-       <Button
-           android:id="@+id/backbutton"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:layout_alignLeft="@+id/reizTabelleText"
-           android:layout_alignParentBottom="true"
-           android:layout_marginBottom="18dp"
-           android:background="#ffffff"
-           android:onClick="backToPrevActivity"
-           android:text="@string/zurueck"
-           android:width="100dp" />
+         </LinearLayout>
+     </ScrollView>
 
 </RelativeLayout>
