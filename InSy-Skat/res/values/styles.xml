@@ -23,6 +23,9 @@
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
+    
+
+    
    <style name="Widget.Button.Toggle" parent="android:Widget">
    <item name="android:background">@drawable/toggle_karo_bg</item>
    <item name="android:disabledAlpha">?android:attr/disabledAlpha</item>
