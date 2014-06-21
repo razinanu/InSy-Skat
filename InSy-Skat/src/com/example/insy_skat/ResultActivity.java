@@ -12,8 +12,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
-import android.widget.ListView;
-import android.widget.ScrollView;
 import android.widget.TextView;
 
 
@@ -45,6 +43,10 @@ public class ResultActivity extends ActionBarActivity {
 		karo=((saveGlobalVariable) this.getApplication()).isKaro();
 		pik=((saveGlobalVariable) this.getApplication()).isPik();
 		grand=((saveGlobalVariable) this.getApplication()).isGrand();
+		nullsp=((saveGlobalVariable) this.getApplication()).isNullsp();
+		nullh=((saveGlobalVariable) this.getApplication()).isNullh();
+		nullou=((saveGlobalVariable) this.getApplication()).isNullou();
+		nullouh=((saveGlobalVariable) this.getApplication()).isNullouh();
 //		System.out.println("Kreuz " + kreuz);
 //		System.out.println("Herz " + herz);
 //		System.out.println("Karo " + karo);
@@ -89,7 +91,7 @@ public class ResultActivity extends ActionBarActivity {
 		}
 		System.out.println("REizValue " + reizValue);
 		System.out.println("length is " +reizInt.length);
-//	    int i=0;
+
 	    for(int i=0;i<reizInt.length;i++){
 	    	b[i]=new TextView(this);
 			b[i].setText(Integer.toString(reizInt[i]));
@@ -112,34 +114,7 @@ public class ResultActivity extends ActionBarActivity {
 			lv.addView(b[i]);
 	    }
 	    
-//		while(i<&&reizInt[i]<=reizValue){
-//			b[i]=new TextView(this);
-//			b[i].setText(Integer.toString(reizInt[i]));
-//			b[i].setTextColor(getResources().getColor(
-//					R.color.textAvailable));
-//			b[i].setGravity(Gravity.CENTER);
-//			b[i].setTextAppearance(this, android.R.style.TextAppearance_Large);
-//			b[i].setBackgroundColor(getResources().getColor(
-//					R.color.backgroundAvailable));
-//			b[i].setLayoutParams(params);
-//			lv.addView(b[i]);
-//			
-//			i++;
-//			System.out.println("i is " + i);
-//		}
-	    
-//     for(;i<reizInt.length-1;i++){
-//    		b[i]=new TextView(this);
-//			b[i].setText(Integer.toString(reizInt[i]));
-//			b[i].setTextColor(getResources().getColor(
-//					R.color.textnotAvailable));
-//			b[i].setGravity(Gravity.CENTER);
-//			b[i].setTextAppearance(this, android.R.style.TextAppearance_Large);
-//			b[i].setBackgroundColor(getResources().getColor(
-//					R.color.backgroundnotAvailable));
-//			b[i].setLayoutParams(params);
-//			lv.addView(b[i]);
-//     }
+
 	     
 	    }
 
