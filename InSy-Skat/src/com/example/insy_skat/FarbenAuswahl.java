@@ -71,11 +71,36 @@ public class FarbenAuswahl extends ActionBarActivity {
 	}
 	 public void backToPrevActivity(View view) 
 	    {
-	        finish();
+		  finish();
 	    }
 	  public void resultKruezActivity(View view) 
 	    {
 	        Intent intent = new Intent(this, ResultActivity.class);
+	        ((saveGlobalVariable) this.getApplication()).setKreuz(true);
+	        startActivity(intent);
+	    }
+	  public void resultPikActivity(View view) 
+	    {
+	        Intent intent = new Intent(this, ResultActivity.class);
+	        ((saveGlobalVariable) this.getApplication()).setPik(true);
+	        startActivity(intent);
+	    }
+	  public void resultKaroActivity(View view) 
+	    {
+	        Intent intent = new Intent(this, ResultActivity.class);
+	        ((saveGlobalVariable) this.getApplication()).setKaro(true);
+	        startActivity(intent);
+	    }
+	  public void resultHerzActivity(View view) 
+	    {
+	        Intent intent = new Intent(this, ResultActivity.class);
+	        ((saveGlobalVariable) this.getApplication()).setHerz(true);
+	        startActivity(intent);
+	    }
+	  public void resultGrandActivity(View view) 
+	    {
+	        Intent intent = new Intent(this, ResultActivity.class);
+	        ((saveGlobalVariable) this.getApplication()).setGrand(true);
 	        startActivity(intent);
 	    }
 

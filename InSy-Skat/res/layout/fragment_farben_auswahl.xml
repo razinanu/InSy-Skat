@@ -33,7 +33,7 @@
              android:layout_height="80dp"
              android:layout_gravity="left"
              android:onClick="resultKruezActivity"
-             android:layout_marginLeft="20dp"
+             android:layout_marginLeft="30dp"
              android:background="@drawable/kreuzsymbol"/>
               
 
@@ -41,7 +41,8 @@
              android:id="@+id/pikSymbol"
              android:layout_width="80dp"
              android:layout_height="80dp"
-              android:layout_marginLeft="80dp"
+              android:onClick="resultPikActivity"
+              android:layout_marginLeft="75dp"
              android:background="@drawable/piksymbol" />
 
      </LinearLayout>
@@ -54,14 +55,16 @@
              android:id="@+id/herzSymbol"
              android:layout_width="80dp"
              android:layout_height="80dp"
-              android:layout_marginLeft="20dp"
+              android:layout_marginLeft="30dp"
+              android:onClick="resultHerzActivity"
              android:background="@drawable/herzsymbol" />
 
          <Button
              android:id="@+id/karoSymbol"
              android:layout_width="80dp"
              android:layout_height="80dp"
-             android:layout_marginLeft="80dp"
+             android:layout_marginLeft="75dp"
+             android:onClick="resultKaroActivity"
              android:background="@drawable/karosymbol" />
 
 
@@ -70,8 +73,9 @@
          android:id="@+id/grandBtn"
          android:layout_width="157dp"
          android:layout_height="60dp"
-         android:layout_marginLeft="60dp"
+         android:layout_marginLeft="65dp"
          android:layout_marginTop="30dp"
+         android:onClick="resultGrandActivity"
          android:background="@drawable/grand" />
 
     <Button

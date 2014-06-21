@@ -2,7 +2,6 @@ package com.example.insy_skat;
 
 import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBarActivity;
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,9 +9,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 
 public class MainActivity extends ActionBarActivity{
 	

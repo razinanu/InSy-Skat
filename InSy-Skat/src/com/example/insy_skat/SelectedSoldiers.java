@@ -5,7 +5,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -20,16 +19,27 @@ public class SelectedSoldiers extends ActionBarActivity {
 
 	private boolean kreuz = false, pik = false, herz = false, karo = false;
 	Boast toast;
+	private int factor;
+	 private ToggleButton kreTg,piTg,hzTg,kroTg;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_selected_soldiers);
+		setContentView(R.layout.fragment_selected_soldiers);
+		kreTg=(ToggleButton) findViewById(R.id.kreuztoggle);
+	    piTg=(ToggleButton) findViewById(R.id.piktoggle);
+	     hzTg=(ToggleButton) findViewById(R.id.herztoggle);
+	    kroTg=(ToggleButton) findViewById(R.id.karotoggle);
+        if(kreTg.isChecked()){
+        	System.out.println("HIIIIII");
+        }
 
-		if (savedInstanceState == null) {
-			getSupportFragmentManager().beginTransaction()
-					.add(R.id.container, new PlaceholderFragment()).commit();
-		}
+	
+
+//		if (savedInstanceState == null) {
+//			getSupportFragmentManager().beginTransaction()
+//					.add(R.id.container, new PlaceholderFragment()).commit();
+//		}
 
 	}
 
@@ -99,11 +109,12 @@ public class SelectedSoldiers extends ActionBarActivity {
 		int ohne = 0;
 		String str = "";
 
-		if (kreuz) {
+		if (kreTg.isChecked()) {
 
 			mit++;
 
-			if (!pik) {
+			if (!piTg.isChecked()) {
+				factor=mit+1;
 
 				str = new StringBuilder("mit ").append(mit).append(" ")
 						.append("Spiel ").append(mit + 1).toString();
@@ -112,20 +123,23 @@ public class SelectedSoldiers extends ActionBarActivity {
 				
 			} else {
 				mit++;
-				if (!herz) {
+				if (!hzTg.isChecked()) {
+					factor=mit+1;
 					str = new StringBuilder("mit ").append(mit).append(" ")
 							.append("Spiel ").append(mit + 1).toString();
 					 toast =Boast.makeText(context, str, Toast.LENGTH_SHORT*2);
 						toast.show();
 				} else {
 					mit++;
-					if (!karo) {
+					if (!kroTg.isChecked()) {
+						factor=mit+1;
 						str = new StringBuilder("mit ").append(mit).append(" ")
 								.append("Spiel ").append(mit + 1).toString();
 						 toast =Boast.makeText(context, str, Toast.LENGTH_SHORT*2);
 							toast.show();
 					} else {
 						mit++;
+						factor=mit+1;
 						str = new StringBuilder("mit ").append(mit).append(" ")
 								.append("Spiel ").append(mit + 1).toString();
 						 toast =Boast.makeText(context, str, Toast.LENGTH_SHORT*2);
@@ -135,21 +149,24 @@ public class SelectedSoldiers extends ActionBarActivity {
 			}
 		} else {
 			ohne++;
-			if (pik) {
+			if (piTg.isChecked()) {
+				factor=ohne+1;
 				str = new StringBuilder("ohne ").append(ohne).append(" ")
 						.append("Spiel ").append(ohne + 1).toString();
 				 toast =Boast.makeText(context, str, Toast.LENGTH_SHORT*2);
 				toast.show();
 			} else {
 				ohne++;
-				if (herz) {
+				if (hzTg.isChecked()) {
+					factor=ohne+1;
 					str = new StringBuilder("ohne ").append(ohne).append(" ")
 							.append("Spiel ").append(ohne + 1).toString();
 					 toast =Boast.makeText(context, str, Toast.LENGTH_SHORT*2);
 						toast.show();
 				} else {
 					ohne++;
-					if (karo) {
+					if (kroTg.isChecked()) {
+						factor=ohne+1;
 						str = new StringBuilder("ohne ").append(ohne)
 								.append(" ").append("Spiel ").append(ohne + 1)
 								.toString();
@@ -157,6 +174,7 @@ public class SelectedSoldiers extends ActionBarActivity {
 							toast.show();
 					} else {
 						ohne++;
+						factor=ohne+1;
 						str = new StringBuilder("ohne ").append(ohne)
 								.append(" ").append("Spiel ").append(ohne + 1)
 								.toString();
@@ -223,6 +241,8 @@ public class SelectedSoldiers extends ActionBarActivity {
 
 	public void farbenAuswahlAcctivity(View view) {
 		Intent intent = new Intent(this, FarbenAuswahl.class);
+		((saveGlobalVariable) this.getApplication()).setFactor(factor);
+		
 		startActivity(intent);
 	}
 

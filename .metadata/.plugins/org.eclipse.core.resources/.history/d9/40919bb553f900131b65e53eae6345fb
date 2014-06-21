@@ -1,0 +1,190 @@
+package com.example.insy_skat;
+
+import android.support.v7.app.ActionBarActivity;
+import android.support.v4.app.Fragment;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.Gravity;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import android.widget.ListView;
+import android.widget.ScrollView;
+import android.widget.TextView;
+
+
+public class ResultActivity extends ActionBarActivity {
+
+	private boolean kreuz = false, pik = false, herz = false, karo = false,
+			grand = false,nullsp=false,nullh=false,nullou=false,nullouh=false;
+	private Bundle extras;
+	private int factor;
+	private LinearLayout lv;
+	private TextView[] b;
+	private int reizValue;
+	private View[] lineseparator;
+	
+	
+	private int reizInt[] = { 18, 20, 22, 24, 27, 30,
+			33, 36, 40, 44, 48, 50, 55, 60, 72,120};
+
+	
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.fragment_result);
+		
+		factor= ((saveGlobalVariable) this.getApplication()).getFactor();
+		kreuz=((saveGlobalVariable) this.getApplication()).isKreuz();
+		herz=((saveGlobalVariable) this.getApplication()).isHerz();
+		karo=((saveGlobalVariable) this.getApplication()).isKaro();
+		pik=((saveGlobalVariable) this.getApplication()).isPik();
+		grand=((saveGlobalVariable) this.getApplication()).isGrand();
+//		System.out.println("Kreuz " + kreuz);
+//		System.out.println("Herz " + herz);
+//		System.out.println("Karo " + karo);
+//		System.out.println("pik " + pik);
+//		System.out.println("grand " + grand);
+//		System.out.println("faktor " + factor);
+
+		lv = (LinearLayout) findViewById(R.id.linearLayout);
+		
+		b=new TextView[reizInt.length];
+		
+		
+		LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
+					android.view.ViewGroup.LayoutParams.MATCH_PARENT,
+					android.view.ViewGroup.LayoutParams.WRAP_CONTENT);
+		if(karo){
+			reizValue=9*factor;
+		}
+		if(herz){
+			reizValue=10*factor;
+		}
+		if(pik){
+			reizValue=11*factor;
+		}
+		if(kreuz){
+			reizValue=12*factor;
+		}
+		if(grand){
+			reizValue=24*factor;
+		}
+		if(nullsp){
+			reizValue=23;
+		}
+		if(nullh){
+			reizValue=35;
+		}
+		if(nullou){
+			reizValue=46;
+		}
+		if(nullouh){
+			reizValue=59;
+		}
+		System.out.println("REizValue " + reizValue);
+		System.out.println("length is " +reizInt.length);
+//	    int i=0;
+	    for(int i=0;i<reizInt.length;i++){
+	    	b[i]=new TextView(this);
+			b[i].setText(Integer.toString(reizInt[i]));
+			b[i].setGravity(Gravity.CENTER);
+			b[i].setTextAppearance(this, android.R.style.TextAppearance_Large);
+			if(reizInt[i]<=reizValue){
+				b[i].setTextColor(getResources().getColor(
+						R.color.textAvailable));
+				b[i].setBackgroundColor(getResources().getColor(
+						R.color.backgroundAvailable));
+				
+			}
+	    }
+	    
+		while(i<&&reizInt[i]<=reizValue){
+			b[i]=new TextView(this);
+			b[i].setText(Integer.toString(reizInt[i]));
+			b[i].setTextColor(getResources().getColor(
+					R.color.textAvailable));
+			b[i].setGravity(Gravity.CENTER);
+			b[i].setTextAppearance(this, android.R.style.TextAppearance_Large);
+			b[i].setBackgroundColor(getResources().getColor(
+					R.color.backgroundAvailable));
+			b[i].setLayoutParams(params);
+			lv.addView(b[i]);
+			
+			i++;
+			System.out.println("i is " + i);
+		}
+	    
+//     for(;i<reizInt.length-1;i++){
+//    		b[i]=new TextView(this);
+//			b[i].setText(Integer.toString(reizInt[i]));
+//			b[i].setTextColor(getResources().getColor(
+//					R.color.textnotAvailable));
+//			b[i].setGravity(Gravity.CENTER);
+//			b[i].setTextAppearance(this, android.R.style.TextAppearance_Large);
+//			b[i].setBackgroundColor(getResources().getColor(
+//					R.color.backgroundnotAvailable));
+//			b[i].setLayoutParams(params);
+//			lv.addView(b[i]);
+//     }
+	     
+	    }
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+
+    	MenuInflater mif=getMenuInflater();
+    	mif.inflate(R.menu.main_activity_action, menu);
+    	mif.inflate(R.menu.result, menu);
+    	
+    	return true;
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		// Handle action bar item clicks here. The action bar will
+		// automatically handle clicks on the Home/Up button, so long
+		// as you specify a parent activity in AndroidManifest.xml.
+        switch (item.getItemId())
+        {
+        case R.id.info_icon:
+        	/*
+            Intent intent = new Intent(this, InfoMain.class);
+            startActivity(intent);
+            */
+        	return true;
+        case R.id.home_icon:
+        	Intent intent = new Intent(this, MainActivity.class);
+        	intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+        	startActivity(intent);
+        	return true;
+        }
+		return super.onOptionsItemSelected(item);
+	}
+
+	/**
+	 * A placeholder fragment containing a simple view.
+	 */
+	public static class PlaceholderFragment extends Fragment {
+
+		public PlaceholderFragment() {
+		}
+
+		@Override
+		public View onCreateView(LayoutInflater inflater, ViewGroup container,
+				Bundle savedInstanceState) {
+			View rootView = inflater.inflate(R.layout.fragment_result,
+					container, false);
+			return rootView;
+		}
+	}
+	public void backToPrevActivity(View view) {
+		finish();
+	}
+
+}
