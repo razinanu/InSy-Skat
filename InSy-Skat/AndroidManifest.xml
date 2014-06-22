@@ -52,6 +52,10 @@
             android:label="@string/title_activity_null_sp"
             android:screenOrientation="portrait" >
         </activity>
+        <activity
+            android:name="com.example.insy_skat.InfoMenu"
+            android:label="@string/title_activity_info_menu" >
+        </activity>
     </application>
 
 </manifest>

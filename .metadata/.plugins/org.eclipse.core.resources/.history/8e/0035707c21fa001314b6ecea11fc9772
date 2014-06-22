@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name" translatable="false">Reizassistent</string>
+    <string name="action_settings" translatable="false">Einstellungen</string>
+    <string name="zurueck" translatable="false">Zurück</string>
+    <string name="weiter" translatable="false">Weiter</string>
+    <string name="menue" translatable="false">Menü</string>
+    <string name="abbrechen" translatable="false">Beenden</string>
+    <string name="farbspielGrand" translatable="false">Farbspiel/Grand</string>
+    <string name="nullString" translatable="false">Nullspiel</string>
+    <string name="grand" translatable="false">Grand</string>
+    <string name="reizassistent" translatable="false">Reizassistent</string>
+    <string name="bubenAuswaehlen" translatable="false">Buben auswählen</string>
+    <string name="farbenAuswahl" translatable="false">Farbe auswählen</string>
+    <string name="reizenTabelle" translatable="false">Reiztabelle</string>
+    <string name="title_activity_selected_soldiers" translatable="false">SelectedSoldiers</string>
+    <string name="title_activity_farben_auswahl" translatable="false">FarbenAuswahl</string>
+    <string name="title_activity_result" translatable="false">ResultActivity</string>
+    <string name="info_title" translatable="false">Zusätzliche Informationen</string>
+    <string name="home_title" translatable="false">Hauptmenü</string>
+    <string name="title_activity_null_sp" translatable="false">NullSPActivity</string>
+    <string name="nullspiel" translatable="false">Nullspiel auswählen</string>
+    <string name="nullH" translatable="false">Hand</string>
+    <string name="nullou" translatable="false">Ouvert</string>
+    <string name="nullouH" translatable="false">Ouvert Hand</string>
+    <string name="title_activity_info_menu">InfoMenu</string>
+    <string name="hello_world">Hello world!</string> 
+    <string name="infomain">Wähle nun einen der 3 Spielmodi. Bei dem Farbspiel sind die Buben und die ausgewählte Farbe Trumpf. 
+        Der Grand hat nur die Buben als Trumpfkarten. Das Ziel dieser Modi ist es, im Stechen die meisten Punkte zu haben. &#x0a;
+Im Nullspiel gibt es keinen Trumpf. Alle Karten reihen sich in die gewohnte Reihenfolge von 7 bis Ass ein. 
+Hier ist es das Ziel, keinen einzigen Stich zu erhalten. Der Modus ist ideal für Handkarten mit niedrigem Wert.</string>
+
+</resources>

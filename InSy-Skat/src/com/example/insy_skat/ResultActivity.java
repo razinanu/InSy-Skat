@@ -27,8 +27,8 @@ public class ResultActivity extends ActionBarActivity {
 	private View[] lineseparator;
 	
 	
-	private int reizInt[] = { 18, 20, 22, 24, 27, 30,
-			33, 36, 40, 44, 48, 50, 55, 60, 72,120};
+	private int reizInt[] = { 18, 20, 22,23, 24, 27,30,33,35,
+			36, 40, 44,46, 48, 50, 55,59, 60, 72,120};
 
 	
 
@@ -122,8 +122,9 @@ public class ResultActivity extends ActionBarActivity {
 	public boolean onCreateOptionsMenu(Menu menu) {
 
     	MenuInflater mif=getMenuInflater();
-    	mif.inflate(R.menu.main_activity_action, menu);
+    
     	mif.inflate(R.menu.result, menu);
+    	mif.inflate(R.menu.main_activity_action, menu);
     	
     	return true;
 	}

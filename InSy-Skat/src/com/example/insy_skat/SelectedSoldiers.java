@@ -18,7 +18,7 @@ import android.widget.ToggleButton;
 public class SelectedSoldiers extends ActionBarActivity {
 
 	private boolean kreuz = false, pik = false, herz = false, karo = false;
-	Boast toast;
+	Toast toast;
 	private int factor;
 	 private ToggleButton kreTg,piTg,hzTg,kroTg;
 
@@ -30,9 +30,7 @@ public class SelectedSoldiers extends ActionBarActivity {
 	    piTg=(ToggleButton) findViewById(R.id.piktoggle);
 	     hzTg=(ToggleButton) findViewById(R.id.herztoggle);
 	    kroTg=(ToggleButton) findViewById(R.id.karotoggle);
-        if(kreTg.isChecked()){
-        	System.out.println("HIIIIII");
-        }
+    
 
 	
 
@@ -49,11 +47,16 @@ public class SelectedSoldiers extends ActionBarActivity {
 
 		if (on) {
 			kreuz = true;
+			if(toast!=null){
+				toast.cancel();
+			}
 			
 			toastAppearance();
 		} else {
 			kreuz = false;
-			
+			if(toast!=null){
+				toast.cancel();
+			}
 			toastAppearance();
 		}
 	}
@@ -64,11 +67,15 @@ public class SelectedSoldiers extends ActionBarActivity {
 
 		if (on) {
 			pik = true;
-			
+			if(toast!=null){
+				toast.cancel();
+			}
 			toastAppearance();
 		} else {
 			pik = false;
-			
+			if(toast!=null){
+				toast.cancel();
+			}
 			toastAppearance();
 		}
 	}
@@ -79,11 +86,15 @@ public class SelectedSoldiers extends ActionBarActivity {
 
 		if (on) {
 			herz = true;
-		
+			if(toast!=null){
+				toast.cancel();
+			}
 			toastAppearance();
 		} else {
 			herz = false;
-			
+			if(toast!=null){
+				toast.cancel();
+			}
 			toastAppearance();
 		}
 	}
@@ -94,11 +105,15 @@ public class SelectedSoldiers extends ActionBarActivity {
 
 		if (on) {
 			karo = true;
-			
+			if(toast!=null){
+				toast.cancel();
+			}
 			toastAppearance();
 		} else {
 			karo = false;
-		
+			if(toast!=null){
+				toast.cancel();
+			}
 			toastAppearance();
 		}
 	}
@@ -118,7 +133,7 @@ public class SelectedSoldiers extends ActionBarActivity {
 
 				str = new StringBuilder("mit ").append(mit).append(" ")
 						.append("Spiel ").append(mit + 1).toString();
-				 toast =Boast.makeText(context, str, Toast.LENGTH_SHORT*2);
+				 toast =Toast.makeText(context, str, Toast.LENGTH_SHORT*2);
 				toast.show();
 				
 			} else {
@@ -127,7 +142,7 @@ public class SelectedSoldiers extends ActionBarActivity {
 					factor=mit+1;
 					str = new StringBuilder("mit ").append(mit).append(" ")
 							.append("Spiel ").append(mit + 1).toString();
-					 toast =Boast.makeText(context, str, Toast.LENGTH_SHORT*2);
+					 toast =Toast.makeText(context, str, Toast.LENGTH_SHORT*2);
 						toast.show();
 				} else {
 					mit++;
@@ -135,14 +150,14 @@ public class SelectedSoldiers extends ActionBarActivity {
 						factor=mit+1;
 						str = new StringBuilder("mit ").append(mit).append(" ")
 								.append("Spiel ").append(mit + 1).toString();
-						 toast =Boast.makeText(context, str, Toast.LENGTH_SHORT*2);
+						 toast =Toast.makeText(context, str, Toast.LENGTH_SHORT*2);
 							toast.show();
 					} else {
 						mit++;
 						factor=mit+1;
 						str = new StringBuilder("mit ").append(mit).append(" ")
 								.append("Spiel ").append(mit + 1).toString();
-						 toast =Boast.makeText(context, str, Toast.LENGTH_SHORT*2);
+						 toast =Toast.makeText(context, str, Toast.LENGTH_SHORT*2);
 							toast.show();
 					}
 				}
@@ -153,7 +168,7 @@ public class SelectedSoldiers extends ActionBarActivity {
 				factor=ohne+1;
 				str = new StringBuilder("ohne ").append(ohne).append(" ")
 						.append("Spiel ").append(ohne + 1).toString();
-				 toast =Boast.makeText(context, str, Toast.LENGTH_SHORT*2);
+				 toast =Toast.makeText(context, str, Toast.LENGTH_SHORT*2);
 				toast.show();
 			} else {
 				ohne++;
@@ -161,7 +176,7 @@ public class SelectedSoldiers extends ActionBarActivity {
 					factor=ohne+1;
 					str = new StringBuilder("ohne ").append(ohne).append(" ")
 							.append("Spiel ").append(ohne + 1).toString();
-					 toast =Boast.makeText(context, str, Toast.LENGTH_SHORT*2);
+					 toast =Toast.makeText(context, str, Toast.LENGTH_SHORT*2);
 						toast.show();
 				} else {
 					ohne++;
@@ -170,7 +185,7 @@ public class SelectedSoldiers extends ActionBarActivity {
 						str = new StringBuilder("ohne ").append(ohne)
 								.append(" ").append("Spiel ").append(ohne + 1)
 								.toString();
-						 toast =Boast.makeText(context, str, Toast.LENGTH_SHORT*2);
+						 toast =Toast.makeText(context, str, Toast.LENGTH_SHORT*2);
 							toast.show();
 					} else {
 						ohne++;
@@ -178,7 +193,7 @@ public class SelectedSoldiers extends ActionBarActivity {
 						str = new StringBuilder("ohne ").append(ohne)
 								.append(" ").append("Spiel ").append(ohne + 1)
 								.toString();
-						 toast =Boast.makeText(context, str, Toast.LENGTH_SHORT*2);
+						 toast =Toast.makeText(context, str, Toast.LENGTH_SHORT*2);
 						toast.show();
 					}
 
@@ -231,6 +246,7 @@ public class SelectedSoldiers extends ActionBarActivity {
 				Bundle savedInstanceState) {
 			View rootView = inflater.inflate(
 					R.layout.fragment_selected_soldiers, container, false);
+			
 			return rootView;
 		}
 	}
@@ -241,6 +257,9 @@ public class SelectedSoldiers extends ActionBarActivity {
 
 	public void farbenAuswahlAcctivity(View view) {
 		Intent intent = new Intent(this, FarbenAuswahl.class);
+		if (!hzTg.isChecked()&&!kreTg.isChecked()&&!piTg.isChecked()&&!kroTg.isChecked()){
+			factor=5;
+		}
 		((saveGlobalVariable) this.getApplication()).setFactor(factor);
 		
 		startActivity(intent);

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name" translatable="false">Reizassistent</string>
+    <string name="action_settings" translatable="false">Einstellungen</string>
+    <string name="zurueck" translatable="false">Zurück</string>
+    <string name="weiter" translatable="false">Weiter</string>
+    <string name="menue" translatable="false">Menü</string>
+    <string name="abbrechen" translatable="false">Beenden</string>
+    <string name="farbspielGrand" translatable="false">Farbspiel/Grand</string>
+    <string name="nullString" translatable="false">Nullspiel</string>
+    <string name="grand" translatable="false">Grand</string>
+    <string name="reizassistent" translatable="false">Reizassistent</string>
+    <string name="bubenAuswaehlen" translatable="false">Buben auswählen</string>
+    <string name="farbenAuswahl" translatable="false">Farbe auswählen</string>
+    <string name="reizenTabelle" translatable="false">Reiztabelle</string>
+    <string name="title_activity_selected_soldiers" translatable="false">SelectedSoldiers</string>
+    <string name="title_activity_farben_auswahl" translatable="false">FarbenAuswahl</string>
+    <string name="title_activity_result" translatable="false">ResultActivity</string>
+    <string name="info_title" translatable="false">Zusätzliche Informationen</string>
+    <string name="home_title" translatable="false">Hauptmenü</string>
+    <string name="title_activity_null_sp" translatable="false">NullSPActivity</string>
+    <string name="nullspiel" translatable="false">Nullspiel auswählen</string>
+    <string name="nullH" translatable="false">Hand</string>
+    <string name="nullou" translatable="false">Ouvert</string>
+    <string name="nullouH" translatable="false">Ouvert Hand</string>
+    <string name="title_activity_info_menu">InfoMenu</string>
+    <string name="hello_world">Hello world!</string> 
+    <string name="infomain">testtest</string>
+
+</resources>

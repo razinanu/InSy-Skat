@@ -31,7 +31,7 @@
                 android:text="@string/nullString"
                 android:onClick="resultNullActivity"
                 android:gravity="center"
-                android:layout_marginTop="70dp"
+                android:layout_marginTop="40dp"
                 android:layout_marginLeft="55dp"
                 android:background="#ffffff" />
 
