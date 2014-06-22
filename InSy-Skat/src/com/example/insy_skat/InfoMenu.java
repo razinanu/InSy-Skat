@@ -1,16 +1,12 @@
 package com.example.insy_skat;
 
 import java.io.BufferedReader;
-import java.io.DataInputStream;
-import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
 import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
-import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -18,11 +14,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.os.Build;
 
 public class InfoMenu extends ActionBarActivity {
-
-	String filename;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -35,13 +28,10 @@ public class InfoMenu extends ActionBarActivity {
 		try {
 
 			BufferedReader br = new BufferedReader(new InputStreamReader(is));
-			String strLine;
-			// Read File Line By Line
-			while ((strLine = br.readLine()) != null) {
-				// Print the content on the console
-				System.out.println("STRING: " + strLine);
-				textview.setText(strLine + "\n");
-			}
+
+			String strLine = br.readLine();
+			textview.setText(strLine);
+			is.close();
 
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -89,6 +79,10 @@ public class InfoMenu extends ActionBarActivity {
 
 			return rootView;
 		}
+	}
+
+	public void backToPrevActivity(View view) {
+		finish();
 	}
 
 }

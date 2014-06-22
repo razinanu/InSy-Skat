@@ -1,2 +1,2 @@
-Wähle nun einen der 3 Spielmodi. Bei dem Farbspiel sind die Buben und die ausgewählte Farbe Trumpf. Der Grand hat nur die Buben als Trumpfkarten. Das Ziel dieser Modi ist es, im Stechen die meisten Punkte zu haben.
-Im Nullspiel gibt es keinen Trumpf. Alle Karten reihen sich in die gewohnte Reihenfolge von 7 bis Ass ein. Hier ist es das Ziel, keinen einzigen Stich zu erhalten. Der Modus ist ideal für Handkarten mit niedrigem Wert.
+ï»¿WÃ¤hle nun einen der 3 Spielmodi. Bei dem Farbspiel sind die Buben und die ausgewÃ¤hlte Farbe Trumpf. Der Grand hat nur die Buben als Trumpfkarten. Das Ziel dieser Modi ist es, im Stechen die meisten Punkte zu haben.
+Im Nullspiel gibt es keinen Trumpf. Alle Karten reihen sich in die gewohnte Reihenfolge von 7 bis Ass ein. Hier ist es das Ziel, keinen einzigen Stich zu erhalten. Der Modus ist ideal fÃ¼r Handkarten mit niedrigem Wert.

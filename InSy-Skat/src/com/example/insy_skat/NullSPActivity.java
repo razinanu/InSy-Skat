@@ -42,10 +42,10 @@ public class NullSPActivity extends ActionBarActivity {
         switch (item.getItemId())
         {
         case R.id.info_icon:
-        	/*
-            Intent intent = new Intent(this, InfoMain.class);
-            startActivity(intent);
-            */
+        	
+            Intent inten = new Intent(this, InfoNullSp.class);
+            startActivity(inten);
+           
         	return true;
         case R.id.home_icon:
         	Intent intent = new Intent(this, MainActivity.class);

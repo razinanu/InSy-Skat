@@ -24,6 +24,10 @@
     <string name="nullH" translatable="false">Hand</string>
     <string name="nullou" translatable="false">Ouvert</string>
     <string name="nullouH" translatable="false">Ouvert Hand</string>
-    <string name="title_activity_info_menu">InfoMenu</string>
+    <string name="title_activity_info_menu" translatable="false">InfoMenu</string>
+    <string name="title_activity_info_select_soldiers" translatable="false">InfoSelectSoldiers</string>
+    <string name="title_activity_info_result" translatable="false">InfoResult</string>
+    <string name="title_activity_info_null_sp" translatable="false">InfoNullSp</string>
+    <string name="title_activity_info_farbe" translatable="false">InfoFarbe</string>
 
 </resources>

@@ -219,10 +219,10 @@ public class SelectedSoldiers extends ActionBarActivity {
         switch (item.getItemId())
         {
         case R.id.info_icon:
-        	/*
-            Intent intent = new Intent(this, InfoMain.class);
-            startActivity(intent);
-            */
+        	
+            Intent inten = new Intent(this, InfoSelectSoldiers.class);
+            startActivity(inten);
+          
         	return true;
         case R.id.home_icon:
         	Intent intent = new Intent(this, MainActivity.class);

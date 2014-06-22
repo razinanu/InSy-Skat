@@ -54,7 +54,28 @@
         </activity>
         <activity
             android:name="com.example.insy_skat.InfoMenu"
-            android:label="@string/title_activity_info_menu" >
+            android:label="@string/title_activity_info_menu"
+             android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.insy_skat.InfoSelectSoldiers"
+            android:label="@string/title_activity_info_select_soldiers"
+             android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.insy_skat.InfoResult"
+            android:label="@string/title_activity_info_result" 
+             android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.example.insy_skat.InfoNullSp"
+            android:label="@string/title_activity_info_null_sp"
+             android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.insy_skat.InfoFarbe"
+            android:label="@string/title_activity_info_farbe"
+             android:screenOrientation="portrait" >
         </activity>
     </application>
 
